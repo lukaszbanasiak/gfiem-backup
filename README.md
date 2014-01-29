@@ -72,6 +72,9 @@ Create a file `weekly.ini` with the following content.
 
 Run or schedule `gfi-backup.exe export -c weekly.ini`
 
+## Download ##
+[https://github.com/lukaszbanasiak/gfiem-backup/releases](https://github.com/lukaszbanasiak/gfiem-backup/releases "Releases")
+
 ## TODO ##
 Cover all functions and parameters from EsmDlibM:
 
