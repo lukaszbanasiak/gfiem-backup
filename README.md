@@ -23,26 +23,25 @@ Run `gfi-backup.exe` with one of the two parameters: `export` or `delete`
 Example
 
     C:\bin>gfi-backup.exe export
-    2014-01-29 09:46:56,270 INFO Running "C:\Program Files (x86)\GFI\EventsManag
-    er2013\EsmDlibM.exe" /exportToFile /path:"C:\GFI-export\tmp" /occurred:"Last mon
-    th" /markEventsAsDeleted
+    2014-01-29 09:46:56,270 INFO Running "C:\Program Files (x86)\GFI\EventsManager2013\EsmDlibM.exe" /exportToFile /path:"C:\GFI-export\tmp" /occurred:"Last month" /markEventsAsDeleted
 
 ## Configuration ##
 
 Edit `default.ini` file or crete new one.
 
-    [main]
-    command = C:\Program Files (x86)\GFI\EventsManager2013\EsmDlibM.exe
-    
-    [export]
-    export_path = C:\GFI-export\
-    occurred = Last month
-    ; Uncomment next line to enable mark copied events as deleted
-    ;mark_as_deleted = yes
-    
-    [delete]
-    dbpath = C:\GFI-db\
+```ini
+[main]
+command = C:\Program Files (x86)\GFI\EventsManager2013\EsmDlibM.exe
 
+[export]
+export_path = C:\GFI-export\
+occurred = Last month
+; Uncomment next line to enable mark copied events as deleted
+;mark_as_deleted = yes
+
+[delete]
+dbpath = C:\GFI-db\
+```
 
 main section
 
@@ -62,14 +61,14 @@ You can create a couple of configuration files and run the program with differen
 
 For example, we like to create weekly backups.
 Create a file `weekly.ini` with the following content.
+```ini
+[main]
+command = C:\Program Files (x86)\GFI\EventsManager2013\EsmDlibM.exe
 
-    [main]
-    command = C:\Program Files (x86)\GFI\EventsManager2013\EsmDlibM.exe
-    
-    [export]
-    export_path = C:\GFI-export\
-    occurred = Last 7 days
-
+[export]
+export_path = C:\GFI-export\
+occurred = Last 7 days
+```
 Run or schedule `gfi-backup.exe export -c weekly.ini`
 
 ## Download ##
