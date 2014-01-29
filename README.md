@@ -6,12 +6,16 @@ Wrapper for EsmDlibM.exe to automated backups in GFI EventsManager.
 EsmDlibM.exe enables you to run operations against the file storage system where processed events
 are stored (database backend). Such operations include Importing or Exporting data.
 
-For now, two functions are supported (See TODO for missing functions).
+For now, two functions are supported (See TODO for missing functions):
 
 1. export (exportToFile): This function enables you to export data from a DLib database server.
 
 2. delete (commitDeletedRecords): This function enables you to delete events that are marked as deleted from the database.
 
+## Features ##
+
+1. Create backup files name from date range of events that are exported (default in EsmDlibM.exe is file creation time :)
+2. Saving stdout to a log file
 
 ## Usage ##
 Run `gfi-backup.exe` with one of the two parameters: `export` or `delete`
@@ -56,8 +60,8 @@ delete section
 
 You can create a couple of configuration files and run the program with different settings.
 
-For example we like to create weekly backups.
-for that create a file `weekly.ini` with the following content.
+For example, we like to create weekly backups.
+Create a file `weekly.ini` with the following content.
 
     [main]
     command = C:\Program Files (x86)\GFI\EventsManager2013\EsmDlibM.exe
