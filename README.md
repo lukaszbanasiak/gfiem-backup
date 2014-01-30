@@ -40,7 +40,7 @@ occurred = Last month
 ;mark_as_deleted = yes
 
 [delete]
-dbpath = C:\GFI-db\
+db_path = C:\GFI-db
 ```
 
 main section
